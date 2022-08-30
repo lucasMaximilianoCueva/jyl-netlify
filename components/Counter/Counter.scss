@@ -1,0 +1,51 @@
+.counter {
+    display: flex;
+    z-index: 2;
+  
+    .counter-item {
+      width: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.25rem;
+      background: #faedcd00;
+  
+      span.label {
+        font-size: 0.8rem;
+        color: #666666a2;
+        width: 100%;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 0.1rem;
+        background: #faedcd00;
+      }
+  
+      span.value {
+        width: 100%;
+        padding: 0 0.5rem;
+        font-size: 4rem;
+        color: #666666c3;
+        text-align: center;
+      }
+  
+      @media (max-width: 500px) {
+        span.value {
+          font-size: 1rem;
+        }
+        span.label {
+          font-size: 0.5rem;
+        }
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .counter {
+      .counter-item {
+        width: 80px;
+      }
+    }
+  }
+  
