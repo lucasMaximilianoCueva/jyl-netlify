@@ -10,6 +10,7 @@ body {
   padding: 0;
   margin: 0;
   background-image: url(./image/TEXTURE-background.jpg);
+  background-attachment: fixed;
 }
 
 main {
@@ -22,8 +23,8 @@ p {
 }
 
 .banner {
-  height: 100vh;
-  background-color: aquamarine;
+  height: 500px;
+  background-color: rgba(127, 255, 212, 0);
   background-image: url(./image/lucas-y-yo.jpeg);
   background-position: center;
   background-repeat: no-repeat;
