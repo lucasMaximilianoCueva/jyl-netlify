@@ -240,7 +240,7 @@ export default function Home() {
 
       <div id="regalo" className="gift-section">
         <img className="flower-regalo" src={flowerRegalo} alt="flower"></img>
-        <h2 className="title-regalo">Nos acompañas o <br /> te lo perdés?</h2>
+        <h2 id="asistencia" className="title-regalo">Nos acompañas o <br /> te lo perdés?</h2>
         <button
             type="button"
             className="btn_confirmar"
