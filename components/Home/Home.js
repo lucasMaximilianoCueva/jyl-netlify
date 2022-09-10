@@ -1,11 +1,12 @@
 import "./Home.scss";
 
 import { ParallaxBanner, ParallaxProvider } from "react-scroll-parallax";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { Counter } from "../Counter/Counter";
 import React from "react";
+import ReactCanvasConfetti from "react-canvas-confetti";
 import backgFooter from "../../image/backg-footer.png";
 import bg1 from "../../image/bg-1.jpg";
 import bg2 from "../../image/bg-2.png";
@@ -29,7 +30,61 @@ import regaloicon from "../../image/regalo.png";
 import shoe from "../../image/shoe.png";
 import tikLogo from "../../image/TiktokLogo.png";
 
+const canvasStyles = {
+  position: "fixed",
+  pointerEvents: "none",
+  width: "100%",
+  height: "100%",
+  colors: ['#ffffff', '#8EAECF'],
+  top: 0,
+  left: 0
+};
+
 export default function Home() {
+  const refAnimationInstance = useRef(null);
+
+  const getInstance = useCallback((instance) => {
+    refAnimationInstance.current = instance;
+  }, []);
+
+  const makeShot = useCallback((particleRatio, opts) => {
+    refAnimationInstance.current &&
+      refAnimationInstance.current({
+        ...opts,
+        origin: { y: 0.7 },
+        particleCount: Math.floor(200 * particleRatio)
+      });
+  }, []);
+
+  const fire = useCallback(() => {
+    makeShot(0.25, {
+      spread: 26,
+      startVelocity: 55
+    });
+
+    makeShot(0.2, {
+      spread: 60
+    });
+
+    makeShot(0.35, {
+      spread: 100,
+      decay: 0.91,
+      scalar: 0.8
+    });
+
+    makeShot(0.1, {
+      spread: 120,
+      startVelocity: 25,
+      decay: 0.92,
+      scalar: 1.2
+    });
+
+    makeShot(0.1, {
+      spread: 120,
+      startVelocity: 45
+    });
+  }, [makeShot]);
+
   const [state, setState] = useState({
     value: "000000000000000000001",
     copied: false,
@@ -52,6 +107,13 @@ export default function Home() {
   const onCopy3 = () => {
     setState3({ copied: true });
   };
+
+  useEffect(() => {
+    let ignore = false;
+    
+    if (!ignore)  fire()
+    return () => { ignore = true; }
+    },[]);
 
   return (
     <main>
@@ -97,17 +159,14 @@ export default function Home() {
                 </h3>
               </div>
               <p>
-                ¡Estamos super felices! Nos sentimos en las nubes y
-                queremos
-                compartir con vos todo nuestro amor. Por eso
-                estamos preparando con mucho cariño y esfuerzo un {" "}
-                casamiento en el que te lo pasarás
-                genial. <br /> <br /> Algo super importante, confirmanos
-                lo antes posible por
-                favor, que así organizarlo todo nos será mucho más fácil.{" "}
-                <br /> <br /> ¡Esperamos que disfruten tanto como
-                nosotros, un abrazo muuuy grande! <br /> <br /> El día de la
-                fiesta compartinos tus <br /> fotos del evento con
+                ¡Estamos super felices! Nos sentimos en las nubes y queremos
+                compartir con vos todo nuestro amor. Por eso estamos preparando
+                con mucho cariño y esfuerzo un casamiento en el que te lo
+                pasarás genial. <br /> <br /> Algo super importante, confirmanos
+                lo antes posible por favor, que así organizarlo todo nos será
+                mucho más fácil. <br /> <br /> ¡Esperamos que disfruten tanto
+                como nosotros, un abrazo muuuy grande! <br /> <br /> El día de
+                la fiesta compartinos tus <br /> fotos del evento con
               </p>
             </div>
             <div className="redes-icon">
@@ -130,12 +189,10 @@ export default function Home() {
               <img className="map" src={invitacionLogo} alt="img"></img>
               <h1>Ubicación</h1>
               <p>
-                Realizaremos la ceremonia alegórica para los que no
-                pudieron
-                acompañarnos en el civil a las 11:30hs. Luego empezamos
-                con la
-                fiesta en el mismo lugar! Te dejamos la ubicación y
-                algunos medios de transporte para guiarte.
+                Realizaremos la ceremonia alegórica para los que no pudieron
+                acompañarnos en el civil a las 11:30hs. Luego empezamos con la
+                fiesta en el mismo lugar! Te dejamos la ubicación y algunos
+                medios de transporte para guiarte.
               </p>
               <div className="adress-lines">
                 <img src={mapa} alt="img" />
@@ -240,28 +297,30 @@ export default function Home() {
 
       <div id="regalo" className="gift-section">
         <img className="flower-regalo" src={flowerRegalo} alt="flower"></img>
-        <h2 id="asistencia" className="title-regalo">Nos acompañas o <br /> te lo perdés?</h2>
+        <h2 id="asistencia" className="title-regalo">
+          Nos acompañas o <br /> te lo perdés?
+        </h2>
         <button
-            type="button"
-            className="btn_confirmar"
-            onClick={(e) => {
-              e.preventDefault();
-              window.location.href = "https://wa.me/message/Z4RYHFSMEJB2C1";
-            }}
-          >
-            <i className="fa-brands fa-whatsapp"></i> Confirmar
-          </button>
+          type="button"
+          className="btn_confirmar"
+          onClick={(e) => {
+            e.preventDefault();
+            window.location.href = "https://wa.me/message/Z4RYHFSMEJB2C1";
+          }}
+        >
+          <i className="fa-brands fa-whatsapp"></i> Confirmar
+        </button>
         <div className="img-plane">
           <img src={regaloicon} alt="img" />
         </div>
         <div>
           <h3 className="gift_title">Regalo</h3>
           <h4>
-            Para nosotros lo más importante  es poder compartir con vos{" "}
-            nuestro gran día. Y como sabrás no  necesitamos nada
-            más para casa, pero si nos queremos ir de Luna de {" "}
-            Miel♥. <br /> <br /> Y si deseas nos podés ayudar a
-            cumplir nuestro próximo sueño ✈️  por los siguiente medios:
+            Para nosotros lo más importante es poder compartir con vos nuestro
+            gran día. Y como sabrás no necesitamos nada más para casa, pero si
+            nos queremos ir de Luna de Miel♥. <br /> <br /> Y si deseas nos
+            podés ayudar a cumplir nuestro próximo sueño ✈️ por los siguiente
+            medios:
           </h4>
           <p className="alias">CBU:</p>
           <div className="copy-clipboard">
@@ -287,8 +346,8 @@ export default function Home() {
             </CopyToClipboard>
           </div>
           <p className="gift_message">
-            También dejaremos un cofre <br /> para recibir en la fiesta, <br /> como
-            prefieras♥
+            También dejaremos un cofre <br /> para recibir en la fiesta, <br />{" "}
+            como prefieras♥
           </p>
         </div>
       </div>
@@ -349,6 +408,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <ReactCanvasConfetti refConfetti={getInstance} style={canvasStyles} />
     </main>
   );
 }
