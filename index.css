@@ -23,10 +23,12 @@ p {
 }
 
 .banner {
-  height: 500px;
+  height: 400px;
+  width: 100%;
   background-color: rgba(127, 255, 212, 0);
-  background-image: url(./image/lucas-y-yo.jpeg);
+  background-image: url(./image/lucas-y-yo.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  z-index: 0;
 }

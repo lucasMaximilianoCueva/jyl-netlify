@@ -94,7 +94,7 @@ main {
     font-size: 90px;
     text-align: center;
     font-family: "melinda", cursive;
-    color: #8EAECF;
+    color: #8eaecf;
     font-weight: 400;
   }
 }
@@ -183,7 +183,7 @@ main {
       font-size: 90px;
       text-align: center;
       font-family: "melinda", cursive;
-      color: #8EAECF;
+      color: #8eaecf;
       font-weight: 400;
     }
   }
@@ -212,7 +212,7 @@ main {
     h1 {
       font-size: 55px;
       font-family: "melinda", cursive;
-      color: #8EAECF;
+      color: #8eaecf;
       font-weight: 400;
       margin-bottom: 5%;
       padding-top: 20%;
@@ -222,7 +222,7 @@ main {
       font-weight: 400;
       font-family: "Montserrat", sans-serif;
       margin-bottom: 10%;
-      color: #8EAECF;
+      color: #8eaecf;
     }
     h3 {
       font-size: 28px;
@@ -250,7 +250,7 @@ main {
         font-weight: 400;
         margin-top: 20px;
         font-family: "Montserrat", sans-serif;
-        color: #8EAECF;
+        color: #8eaecf;
       }
     }
     .flower-small {
@@ -356,7 +356,7 @@ main {
       border-radius: 0.8rem;
       cursor: pointer;
       transition: filter 0.3s;
-  
+
       &:hover {
         filter: brightness(0.7);
       }
@@ -364,8 +364,12 @@ main {
   }
   .gift-section {
     height: 90vh;
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(142,174,207,1) 24%);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(142, 174, 207, 1) 24%
+    );
     .flower-regalo {
       position: absolute;
       width: 170px;
@@ -407,7 +411,7 @@ main {
       justify-content: center;
     }
   }
-  
+
   .dress-code-section {
     height: 50vh;
     .img-dress-code {
@@ -419,7 +423,7 @@ main {
       font-size: 50px;
       font-weight: 400;
       font-family: "melinda", cursive;
-      color: #8EAECF;
+      color: #8eaecf;
       text-align: center;
     }
     h5 {
@@ -441,7 +445,7 @@ main {
       position: absolute;
     }
   }
-  
+
   .playlist-section {
     height: 90vh;
     background-color: #666666;
@@ -483,7 +487,7 @@ main {
       border-radius: 0.8rem;
       cursor: pointer;
       transition: filter 0.3s;
-  
+
       &:hover {
         filter: brightness(0.7);
       }
@@ -493,7 +497,7 @@ main {
       bottom: 0;
     }
   }
-  
+
   .footer {
     padding-top: 15%;
     background-color: #8eaecf;
@@ -560,19 +564,19 @@ main {
       }
     }
     .background-counter {
-        position: absolute;
-        display: flex;
-        top: 60vh;
-        width: 100%;
-        height: 250px;
-        justify-content: center;
-        background-image: url(../../image/mountain-down-right.png);
-        background-size: contain;
-        background-repeat: no-repeat;
+      position: absolute;
+      display: flex;
+      top: 60vh;
+      width: 100%;
+      height: 250px;
+      justify-content: center;
+      background-image: url(../../image/mountain-down-right.png);
+      background-size: contain;
+      background-repeat: no-repeat;
       h6 {
         font-family: "Montserrat", cursive;
         text-align: center;
-        font-size: 20px;
+        font-size: 25px;
         font-style: italic;
         color: #d5c690;
         font-weight: 400;
@@ -596,7 +600,7 @@ main {
     h1 {
       font-size: 55px;
       font-family: "melinda", cursive;
-      color: #8EAECF;
+      color: #8eaecf;
       font-weight: 400;
       margin-bottom: 5%;
     }
@@ -605,7 +609,7 @@ main {
       font-weight: 400;
       font-family: "Montserrat", sans-serif;
       margin-bottom: 10%;
-      color: #8EAECF;
+      color: #8eaecf;
     }
     h3 {
       font-size: 28px;
@@ -636,12 +640,11 @@ main {
         font-size: 28px;
         font-weight: 400;
         font-family: "Montserrat", sans-serif;
-        color: #8EAECF;
+        color: #8eaecf;
         text-align: center;
       }
     }
     .container-title {
-
     }
     .flower-small {
       position: absolute;
@@ -701,11 +704,11 @@ main {
       font-size: 50px;
       font-weight: 400;
       font-family: "melinda", cursive;
-      color: #8EAECF;
+      color: #8eaecf;
     }
   }
   .info-bus {
-    height: 60vh;
+    height: 50vh;
     padding: 0 7% 0 7%;
     p {
       font-size: 15px;
@@ -726,6 +729,53 @@ main {
     .row-bus {
       display: flex;
       justify-content: space-around;
+    }
+  }
+  .location-flowers {
+    display: flex;
+    height: 300px;
+    background-image: url(../../image/location-flowers.png);
+    width: 100%;
+    height: 200px;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    h2 {
+      position: absolute;
+      padding-top: 220px;
+      z-index: 1;
+      font-size: 45px;
+      font-weight: 400;
+      font-family: "melinda", cursive;
+      align-items: center;
+      text-align: center;
+      color: #303030;
+    }
+  }
+  .container-btn-confirmar{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    padding-top: 300px;
+    width: 100%;
+    button {
+      position: absolute;
+      font-size: 1rem;
+      max-width: 160px;
+      width: 100%;
+      padding: 0.8rem 2rem;
+      background: #faedcd00;
+      color: #ffffff;
+      border: 1px solid white;
+      border-radius: 0.8rem;
+      cursor: pointer;
+      transition: filter 0.3s;
+      z-index: 1;
+      &:hover {
+        filter: brightness(0.7);
+        background: #ffffff6c;
+      }
     }
   }
   .invitation-section {
@@ -764,7 +814,7 @@ main {
       border-radius: 0.8rem;
       cursor: pointer;
       transition: filter 0.3s;
-  
+
       &:hover {
         filter: brightness(0.7);
       }
@@ -774,7 +824,7 @@ main {
     height: 90vh;
     // background: rgb(255,255,255);
     // background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(142,174,207,1) 24%);
-    background-color: #8EAECF;
+    background-color: #8eaecf;
     .flower-regalo {
       position: absolute;
       width: 140px;
@@ -782,39 +832,6 @@ main {
       top: 3380px;
       transform: rotate(60deg);
       opacity: 0.8;
-    }
-    .title-regalo {
-      position: absolute;
-      top: 3020px;
-      font-size: 45px;
-      font-weight: 400;
-      font-family: "melinda", cursive;
-      align-items: center;
-      text-align: center;
-      color: #303030;
-      left: 10%;
-      right: 10%;
-    }
-    .btn_confirmar {
-      position: absolute;
-      top: 3320px;
-      left: 27%;
-      right: 27%;
-      font-size: 1rem;
-      max-width: 160px;
-      width: 100%;
-      padding: 0.8rem 2rem;
-      background: #faedcd00;
-      color: #ffffff;
-      border: 1px solid white;
-      border-radius: 0.8rem;
-      cursor: pointer;
-      transition: filter 0.3s;
-  
-      &:hover {
-        filter: brightness(0.7);
-        background: #ffffff6c;
-      }
     }
     .img-plane {
       display: flex;
@@ -869,7 +886,7 @@ main {
       }
     }
   }
-  
+
   .dress-code-section {
     height: 70vh;
     .img-dress-code {
@@ -884,7 +901,7 @@ main {
       font-size: 50px;
       font-weight: 400;
       font-family: "melinda", cursive;
-      color: #8EAECF;
+      color: #8eaecf;
       text-align: center;
     }
     h5 {
@@ -906,7 +923,7 @@ main {
       position: absolute;
     }
   }
-  
+
   .playlist-section {
     height: 90vh;
     background-color: #666666;
@@ -914,8 +931,7 @@ main {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 13%;
-      margin-bottom: 10%;
+      padding-top: 3%;
       img {
         width: 100px;
       }
@@ -951,7 +967,7 @@ main {
       border-radius: 0.8rem;
       cursor: pointer;
       transition: filter 0.3s;
-  
+
       &:hover {
         filter: brightness(0.7);
         background: #ffffff6c;
@@ -963,7 +979,7 @@ main {
       margin: 0;
     }
   }
-  
+
   .footer {
     padding-top: 5%;
     background-color: #8eaecf;

@@ -15,29 +15,30 @@ import bg4 from "../../image/bg-4.png";
 import bg5 from "../../image/bg-5.png";
 import bg6 from "../../image/lucas-y-yo.jpeg";
 import branch from "../../image/FLOWER.png";
-import bus from "../../image/bus.png";
-import copy from "../../image/cop.png";
-import dance from "../../image/dance.png";
-import faceLogo from "../../image/FacebookLogo.png";
+import bus from "../../image/bus-location-icon.svg";
+import copy from "../../image/clipboard-copy-icon.svg";
+import dance from "../../image/playlist-icon.svg";
+import faceLogo from "../../image/FacebookLogo-icon.svg";
 import flowerRegalo from "../../image/hojamarron.png";
 import flowerSingle from "../../image/Flower-small.png";
 import flowerTop from "../../image/flower-top-left.png";
-import instaLogo from "../../image/InstagramLogo.png";
-import invitacionLogo from "../../image/ubicacion.png";
-import mapa from "../../image/mapa_pin.png";
+import instaLogo from "../../image/InstagramLogo-icon.svg";
+import invitacionLogo from "../../image/location_map-icon.svg";
+import locationFlower from "../../image/location-flowers.png";
+import mapa from "../../image/location-icon.svg";
 import photoUs from "../../image/lucas-y-yo.jpeg";
-import regaloicon from "../../image/regalo.png";
-import shoe from "../../image/shoe.png";
-import tikLogo from "../../image/TiktokLogo.png";
+import regaloicon from "../../image/gift-icon.svg";
+import shoe from "../../image/dress-code-icon.svg";
+import tikLogo from "../../image/TiktokLogo-icon.svg";
 
 const canvasStyles = {
   position: "fixed",
   pointerEvents: "none",
   width: "100%",
   height: "100%",
-  colors: ['#ffffff', '#8EAECF'],
+  colors: ["#ffffff", "#8EAECF"],
   top: 0,
-  left: 0
+  left: 0,
 };
 
 export default function Home() {
@@ -52,36 +53,36 @@ export default function Home() {
       refAnimationInstance.current({
         ...opts,
         origin: { y: 0.7 },
-        particleCount: Math.floor(200 * particleRatio)
+        particleCount: Math.floor(200 * particleRatio),
       });
   }, []);
 
   const fire = useCallback(() => {
     makeShot(0.25, {
       spread: 26,
-      startVelocity: 55
+      startVelocity: 55,
     });
 
     makeShot(0.2, {
-      spread: 60
+      spread: 60,
     });
 
     makeShot(0.35, {
       spread: 100,
       decay: 0.91,
-      scalar: 0.8
+      scalar: 0.8,
     });
 
     makeShot(0.1, {
       spread: 120,
       startVelocity: 25,
       decay: 0.92,
-      scalar: 1.2
+      scalar: 1.2,
     });
 
     makeShot(0.1, {
       spread: 120,
-      startVelocity: 45
+      startVelocity: 45,
     });
   }, [makeShot]);
 
@@ -110,10 +111,12 @@ export default function Home() {
 
   useEffect(() => {
     let ignore = false;
-    
-    if (!ignore)  fire()
-    return () => { ignore = true; }
-    },[]);
+
+    if (!ignore) fire();
+    return () => {
+      ignore = true;
+    };
+  }, []);
 
   return (
     <main>
@@ -247,6 +250,26 @@ export default function Home() {
             </div>
           </div>
 
+          <div className="location-flowers">
+            {/* <img src={locationFlower}></img> */}
+            <h2 id="asistencia" className="title-regalo">
+              Nos acompañas o <br /> te lo perdés?
+            </h2>
+          </div>
+
+          <div className="container-btn-confirmar">
+            <button
+              type="button"
+              className="btn_confirmar"
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = "https://wa.me/message/Z4RYHFSMEJB2C1";
+              }}
+            >
+              <i className="fa-brands fa-whatsapp"></i> Confirmar
+            </button>
+          </div>
+
           {/* <div className="invitation-title">
             <h2>
               ¿Nos acompañas <br /> o te lo perdés?
@@ -297,19 +320,9 @@ export default function Home() {
 
       <div id="regalo" className="gift-section">
         <img className="flower-regalo" src={flowerRegalo} alt="flower"></img>
-        <h2 id="asistencia" className="title-regalo">
+        {/* <h2 id="asistencia" className="title-regalo">
           Nos acompañas o <br /> te lo perdés?
-        </h2>
-        <button
-          type="button"
-          className="btn_confirmar"
-          onClick={(e) => {
-            e.preventDefault();
-            window.location.href = "https://wa.me/message/Z4RYHFSMEJB2C1";
-          }}
-        >
-          <i className="fa-brands fa-whatsapp"></i> Confirmar
-        </button>
+        </h2> */}
         <div className="img-plane">
           <img src={regaloicon} alt="img" />
         </div>
@@ -403,8 +416,8 @@ export default function Home() {
             <span className="brand-letter">L</span>
           </div>
           <div className="credits">
-            <h6>Designed by Jesica Tofaletti</h6>
-            <h6>Developed by Lucas M. Cueva</h6>
+            <h6>Designed by Shesi</h6>
+            <h6>Developed by Lucas</h6>
           </div>
         </div>
       </div>
