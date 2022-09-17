@@ -96,7 +96,7 @@ main {
     font-family: "melinda", cursive;
     color: #8eaecf;
     font-weight: 400;
-    text-shadow: 1px 1px #FFFFFF
+    text-shadow: 1px 1px #ffffff;
   }
 }
 
@@ -557,19 +557,14 @@ main {
     }
     .home {
       padding: 30% 0 0 0;
-      h6 {
-        font-size: 20px;
-        font-style: italic;
-        color: #d5c690;
-        margin-top: 10%;
-      }
     }
     .background-counter {
       position: absolute;
       display: flex;
-      top: 60vh;
+      top: 65vh;
       width: 100%;
-      height: 250px;
+
+      // min-height: 250px;
       justify-content: center;
       background-image: url(../../image/mountain-down-right.png);
       background-size: contain;
@@ -754,7 +749,7 @@ main {
       color: #303030;
     }
   }
-  .container-btn-confirmar{
+  .container-btn-confirmar {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -822,10 +817,15 @@ main {
     }
   }
   .gift-section {
-    height: 90vh;
+    height: 100vh;
+    max-height: max-content;
+    block-size: fit-content;
     // background: rgb(255,255,255);
     // background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(142,174,207,1) 24%);
     background-color: #8eaecf;
+    .detail-gift {
+      height: 500px;
+    }
     .flower-regalo {
       position: absolute;
       width: 140px;
@@ -886,10 +886,36 @@ main {
         padding: 0;
       }
     }
+    .btn-copy {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      max-width: 30px;
+      width: 100%;
+      padding: 0.5rem 0.5rem;
+      background: #ffffff00;
+      color: #ffffff;
+      border: 1px solid white;
+      border-radius: 0.8rem;
+      cursor: pointer;
+      transition: filter 0.3s;
+      z-index: 1;
+      text-align: center;
+      &:hover {
+        filter: brightness(0.7);
+        background: #ffffff6c;
+      }
+      i {
+        font-size: 10px;
+        line-height: 4px;
+      }
+    }
   }
 
   .dress-code-section {
-    height: 70vh;
+    height: 80vh;
+    max-height: max-content;
+    block-size: fit-content;
     .img-dress-code {
       display: flex;
       flex-direction: column;
@@ -918,6 +944,7 @@ main {
       padding: 0 10% 0 10%;
       text-align: justify;
       color: #666666;
+      margin-bottom: 10%;
     }
     .img-flower-dess {
       width: 60%;
@@ -1017,5 +1044,40 @@ main {
         padding: 0;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .home {
+    padding: 30% 0 0 0;
+  }
+  .background-counter {
+    position: absolute;
+    display: flex;
+    top: 60vh;
+    width: 100%;
+    height: 250px;
+    min-height: 250px;
+    justify-content: center;
+    background-image: url(../../image/mountain-down-right.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    h6 {
+      // font-family: "Montserrat", cursive;
+      text-align: center;
+      font-size: 25px;
+      font-style: italic;
+      color: #d5c690;
+      font-weight: 400;
+      margin-top: 10%;
+    }
+  }
+  .counter2 {
+    position: absolute;
+    bottom: 12%;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
   }
 }

@@ -326,7 +326,7 @@ export default function Home() {
         <div className="img-plane">
           <img src={regaloicon} alt="img" />
         </div>
-        <div>
+        <div className="detail-gift">
           <h3 className="gift_title">Regalo</h3>
           <h4>
             Para nosotros lo más importante es poder compartir con vos nuestro
@@ -339,7 +339,10 @@ export default function Home() {
           <div className="copy-clipboard">
             <p>000000000000000000001</p>
             <CopyToClipboard onCopy={onCopy} text={state.value}>
-              <img src={copy} width={30} alt="copy-to-clipboard"></img>
+              <button className="btn-copy">
+                {/* <img src={copy} width={30} alt="copy-to-clipboard"></img> */}
+                <i className="fa-solid fa-copy"></i>
+              </button>
             </CopyToClipboard>
           </div>
           <p className="alias">
@@ -348,14 +351,20 @@ export default function Home() {
           <div className="copy-clipboard">
             <p>000000000000000000002</p>
             <CopyToClipboard onCopy={onCopy2} text={state2.value}>
-              <img src={copy} width={30} alt="copy-to-clipboard"></img>
+              <button className="btn-copy">
+                {/* <img src={copy} width={30} alt="copy-to-clipboard"></img> */}
+                <i className="fa-solid fa-copy"></i>
+              </button>
             </CopyToClipboard>
           </div>
           <p className="alias">Alias Mercado pago:</p>
           <div className="copy-clipboard">
             <p>000000000000000000003</p>
             <CopyToClipboard onCopy={onCopy3} text={state3.value}>
-              <img src={copy} width={30} alt="copy-to-clipboard"></img>
+              <button className="btn-copy">
+                {/* <img src={copy} width={30} alt="copy-to-clipboard"></img> */}
+                <i className="fa-solid fa-copy"></i>
+              </button>
             </CopyToClipboard>
           </div>
           <p className="gift_message">
