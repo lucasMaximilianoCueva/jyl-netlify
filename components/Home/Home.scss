@@ -866,6 +866,9 @@ main {
       text-align: center;
       color: #ffffff;
     }
+    .alias-container {
+      min-height: 20px;
+    }
     .alias {
       margin: 0;
     }
@@ -884,6 +887,12 @@ main {
         width: 20px;
         margin: 0;
         padding: 0;
+      }
+      span {
+        font-size: 30px;
+        font-weight: 400;
+        color: #ffffff;
+        font-family: "melinda", cursive;
       }
     }
     .btn-copy {
@@ -909,6 +918,12 @@ main {
         font-size: 10px;
         line-height: 4px;
       }
+    }
+    .copied {
+      display: none;
+    }
+    .message-copied {
+      display: block;
     }
   }
 

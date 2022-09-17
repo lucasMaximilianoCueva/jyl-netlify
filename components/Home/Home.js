@@ -99,14 +99,41 @@ export default function Home() {
     copied: false,
   });
 
+  const [onCopyClass, setOnCopyClass] = useState("");
+  const [mesaggeCopy, setMessageCopy] = useState("copied");
+
+  const [onCopyClass2, setOnCopyClass2] = useState("");
+  const [mesaggeCopy2, setMessageCopy2] = useState("copied");
+
+  const [onCopyClass3, setOnCopyClass3] = useState("");
+  const [mesaggeCopy3, setMessageCopy3] = useState("copied");
+
   const onCopy = () => {
     setState({ copied: true });
+    setOnCopyClass("copied");
+    setMessageCopy("message-copied");
+    setTimeout(() => {
+      setOnCopyClass("");
+      setMessageCopy("copied");
+    }, 3000);
   };
   const onCopy2 = () => {
     setState2({ copied: true });
+    setOnCopyClass2("copied");
+    setMessageCopy2("message-copied");
+    setTimeout(() => {
+      setOnCopyClass2("");
+      setMessageCopy2("copied");
+    }, 3000);
   };
   const onCopy3 = () => {
     setState3({ copied: true });
+    setOnCopyClass3("copied");
+    setMessageCopy3("message-copied");
+    setTimeout(() => {
+      setOnCopyClass3("");
+      setMessageCopy3("copied");
+    }, 3000);
   };
 
   useEffect(() => {
@@ -337,35 +364,44 @@ export default function Home() {
           </h4>
           <p className="alias">CBU:</p>
           <div className="copy-clipboard">
-            <p>000000000000000000001</p>
+            <p className={onCopyClass}>000000000000000000001</p>
             <CopyToClipboard onCopy={onCopy} text={state.value}>
-              <button className="btn-copy">
+              <button className={onCopyClass || "btn-copy"}>
                 {/* <img src={copy} width={30} alt="copy-to-clipboard"></img> */}
                 <i className="fa-solid fa-copy"></i>
               </button>
             </CopyToClipboard>
+            <span className={mesaggeCopy}>copiado!</span>
           </div>
-          <p className="alias">
-            Alias: <br />
-          </p>
+          <div className="alias-container">
+            <p className={onCopyClass || "alias"}>
+              Alias: <br />
+            </p>
+          </div>
           <div className="copy-clipboard">
-            <p>000000000000000000002</p>
+            <p className={onCopyClass2}>000000000000000000002</p>
             <CopyToClipboard onCopy={onCopy2} text={state2.value}>
-              <button className="btn-copy">
+              <button className={onCopyClass2 || "btn-copy"}>
                 {/* <img src={copy} width={30} alt="copy-to-clipboard"></img> */}
                 <i className="fa-solid fa-copy"></i>
               </button>
             </CopyToClipboard>
+            <span className={mesaggeCopy2}>copiado!</span>
           </div>
-          <p className="alias">Alias Mercado pago:</p>
+          <div className="alias-container">
+            <p className={onCopyClass2 || "alias"}>
+              Alias: <br />
+            </p>
+          </div>
           <div className="copy-clipboard">
-            <p>000000000000000000003</p>
+            <p className={onCopyClass3}>000000000000000000003</p>
             <CopyToClipboard onCopy={onCopy3} text={state3.value}>
-              <button className="btn-copy">
+              <button className={onCopyClass3 || "btn-copy"}>
                 {/* <img src={copy} width={30} alt="copy-to-clipboard"></img> */}
                 <i className="fa-solid fa-copy"></i>
               </button>
             </CopyToClipboard>
+            <span className={mesaggeCopy3}>copiado!</span>
           </div>
           <p className="gift_message">
             También dejaremos un cofre <br /> para recibir en la fiesta, <br />{" "}
