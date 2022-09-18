@@ -192,7 +192,7 @@ export default function Home() {
                 ¡Estamos super felices! Nos sentimos en las nubes y queremos
                 compartir con vos todo nuestro amor. Por eso estamos preparando
                 con mucho cariño y esfuerzo un casamiento en el que te lo
-                pasarás genial. <br /> <br /> Algo super importante, confirmanos
+                pasarás genial. <br /> <br /> Algo super importante, <strong>evento +18</strong> confirmanos
                 lo antes posible por favor, que así organizarlo todo nos será
                 mucho más fácil. <br /> <br /> ¡Esperamos que disfruten tanto
                 como nosotros, un abrazo muuuy grande! <br /> <br /> El día de
@@ -364,7 +364,7 @@ export default function Home() {
           </h4>
           <p className="alias">CBU:</p>
           <div className="copy-clipboard">
-            <p className={onCopyClass}>000000000000000000001</p>
+            <p className={onCopyClass}>0140101703402451997789</p>
             <CopyToClipboard onCopy={onCopy} text={state.value}>
               <button className={onCopyClass || "btn-copy"}>
                 {/* <img src={copy} width={30} alt="copy-to-clipboard"></img> */}
@@ -379,7 +379,7 @@ export default function Home() {
             </p>
           </div>
           <div className="copy-clipboard">
-            <p className={onCopyClass2}>000000000000000000002</p>
+            <p className={onCopyClass2}>SHESYLU</p>
             <CopyToClipboard onCopy={onCopy2} text={state2.value}>
               <button className={onCopyClass2 || "btn-copy"}>
                 {/* <img src={copy} width={30} alt="copy-to-clipboard"></img> */}
@@ -390,11 +390,11 @@ export default function Home() {
           </div>
           <div className="alias-container">
             <p className={onCopyClass2 || "alias"}>
-              Alias: <br />
+              Alias Mercado Pago: <br />
             </p>
           </div>
           <div className="copy-clipboard">
-            <p className={onCopyClass3}>000000000000000000003</p>
+            <p className={onCopyClass3}>SHESYLU23</p>
             <CopyToClipboard onCopy={onCopy3} text={state3.value}>
               <button className={onCopyClass3 || "btn-copy"}>
                 {/* <img src={copy} width={30} alt="copy-to-clipboard"></img> */}
