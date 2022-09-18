@@ -167,7 +167,7 @@ export default function Home() {
               </div>
 
               <div className="background-counter">
-                <h6>
+                <h6 className="nos-casamos">
                   ¡Siiii, Nos <br /> Casamooos!
                 </h6>
               </div>
