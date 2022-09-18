@@ -87,15 +87,15 @@ export default function Home() {
   }, [makeShot]);
 
   const [state, setState] = useState({
-    value: "000000000000000000001",
+    value: "0140101703402451997789",
     copied: false,
   });
   const [state2, setState2] = useState({
-    value: "000000000000000000002",
+    value: "SHESYLU",
     copied: false,
   });
   const [state3, setState3] = useState({
-    value: "000000000000000000003",
+    value: "SHESYLU23",
     copied: false,
   });
 
@@ -442,7 +442,7 @@ export default function Home() {
             type="button"
             onClick={(e) => {
               e.preventDefault();
-              window.location.href = "https://wa.me/message/Z4RYHFSMEJB2C1";
+              window.location.href = "https://open.spotify.com/playlist/2jEEcEd1CbVOwop3vD593c?si=K-Vtmr4GSwigHb0VVythXw&utm_source=whatsapp&pt=effa4b92b23ea916197fdf1d6bca4e14";
             }}
           >
             <i className="fa-brands fa-spotify"></i> Sugerir
