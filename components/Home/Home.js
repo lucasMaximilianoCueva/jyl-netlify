@@ -151,11 +151,11 @@ export default function Home() {
         <header>
           <div className="section-simple">
             <div id="main-section">
-              {/* <img
+              <img
                 className="img-flower"
                 src={flowerTop}
                 alt="flower"
-              /> */}
+              />
 
               <div className="home">
                 <div>

@@ -194,15 +194,16 @@ main {
 
   .main-section {
     height: 90vh;
-    .img-flower {
-      position: absolute;
-      width: 50%;
-      top: 0;
-      left: 0;
-      height: auto;
-      margin: 0;
-      padding: 0;
-    }
+  }
+
+  .img-flower {
+    position: absolute;
+    width: 50%;
+    top: 0;
+    left: 0;
+    height: auto;
+    margin: 0;
+    padding: 0;
   }
 
   .info-section {
@@ -423,7 +424,7 @@ main {
       position: absolute;
       width: 300px;
       left: -90px;
-      top: 4400px;
+      top: 500%;
       transform: rotate(60deg);
     }
     .img-plane {
@@ -458,6 +459,36 @@ main {
       display: flex;
       flex-direction: row;
       justify-content: center;
+    }
+    .btn-copy {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      max-width: 30px;
+      width: 100%;
+      padding: 1rem 1rem;
+      background: #ffffff00;
+      color: #ffffff;
+      border: 2px solid white;
+      border-radius: 0.8rem;
+      cursor: pointer;
+      transition: filter 0.3s;
+      z-index: 1;
+      text-align: center;
+      &:hover {
+        filter: brightness(0.7);
+        background: #ffffff6c;
+      }
+      i {
+        font-size: 10px;
+        line-height: 4px;
+      }
+    }
+    .copied {
+      display: none;
+    }
+    .message-copied {
+      display: block;
     }
   }
 
