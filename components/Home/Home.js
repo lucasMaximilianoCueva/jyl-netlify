@@ -166,6 +166,8 @@ export default function Home() {
                 </div>
               </div>
 
+              <div className="mountain"></div>
+
               <div className="background-counter">
                 <h6 className="nos-casamos">
                   ¡Siiii, Nos <br /> Casamooos!

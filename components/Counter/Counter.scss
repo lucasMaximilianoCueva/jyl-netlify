@@ -3,7 +3,7 @@
     z-index: 2;
   
     .counter-item {
-      width: 100px;
+      width: 200px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -13,7 +13,7 @@
       padding-top: 30px;
   
       span.label {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         color: #666666a2;
         width: 100%;
         text-transform: uppercase;
@@ -26,7 +26,7 @@
       span.value {
         width: 100%;
         padding: 0 0.5rem;
-        font-size: 4rem;
+        font-size: 3rem;
         color: #666666c3;
         text-align: center;
       }
