@@ -104,6 +104,26 @@ export const Navb = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+
+      {/* desktop navbar */}
+
+      <nav className="desktop-navbar">
+        <HashLink className="navbar-brand" smooth={true} to="/#Bienvenidos!">
+          Información
+        </HashLink>
+        <HashLink className="navbar-brand" smooth={true} to="/#ubicacion">
+          ¿Cómo llegar?
+        </HashLink>
+        <HashLink className="navbar-brand" smooth={true} to="/#asistencia">
+          Asistencia
+        </HashLink>
+        <HashLink className="navbar-brand" smooth={true} to="/#regalo">
+          Regalo
+        </HashLink>
+        <HashLink className="navbar-brand" smooth={true} to="/#dress-code">
+          Dress Code
+        </HashLink>
+      </nav>
     </>
   );
 };

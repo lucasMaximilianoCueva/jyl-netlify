@@ -15,9 +15,6 @@
 main {
   margin: 0;
   padding: 0;
-  img {
-    margin-left: 2rem;
-  }
 
   @media (max-width: 1170px) {
     flex-direction: column;
@@ -124,9 +121,6 @@ main {
   }
 
   main {
-    img {
-      margin-left: 2rem;
-    }
 
     .img-mountain {
       position: absolute;
@@ -261,8 +255,8 @@ main {
     }
     .flower-small {
       position: absolute;
-      width: 120px;
-      left: 0;
+      width: 450px;
+      left: -100px;
       top: 1100px;
       transform: rotate(-80deg);
     }
@@ -306,6 +300,7 @@ main {
       font-weight: 400;
       font-family: "melinda", cursive;
       color: #76a1ef;
+      margin-bottom: 50px;
     }
   }
   .info-bus {
@@ -364,6 +359,7 @@ main {
       max-width: 160px;
       width: 100%;
       padding: 0.8rem 2rem;
+      margin-top: 250px;
       background: #faedcd00;
       color: #ffffff;
       border: 2px solid white;
@@ -425,9 +421,9 @@ main {
     background: rgba(142, 174, 207, 1);
     .flower-regalo {
       position: absolute;
-      width: 170px;
-      left: -50px;
-      top: 3830px;
+      width: 300px;
+      left: -90px;
+      top: 4400px;
       transform: rotate(60deg);
     }
     .img-plane {
@@ -442,6 +438,7 @@ main {
       font-family: "melinda", cursive;
       text-align: center;
       color: #ffffff;
+      margin-bottom: 50px;
     }
     h4 {
       font-size: 18px;
@@ -499,13 +496,13 @@ main {
   }
 
   .playlist-section {
-    height: 90vh;
+    height: 92vh;
     background-color: #666666;
     .img-playlist {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 13%;
+      padding-top: 50px;
       margin-bottom: 10%;
     }
     h4 {
@@ -526,7 +523,7 @@ main {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 13%;
+      padding-top: 50px;
     }
     button {
       font-size: 1rem;
@@ -551,10 +548,14 @@ main {
   }
 
   .footer {
-    padding-top: 15%;
+
+    padding: 0;
     background-color: #8eaecf;
+    .background-footer {
+      margin-left: 0;
+    }
     h4 {
-      font-size: 16px;
+      font-size: 36px;
       font-family: "Montserrat", sans-serif;
       text-align: center;
       color: #ffffff;
@@ -595,6 +596,10 @@ main {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .desktop-navbar {
+    display: none;
+  }
+  
   main {
     flex-direction: column;
     .img-flower {
