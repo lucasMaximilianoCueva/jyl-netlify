@@ -20,7 +20,7 @@ main {
     flex-direction: column;
 
     img {
-      margin: 2rem 0;
+      margin: 0 0;
       width: 80px;
     }
   }
@@ -134,7 +134,7 @@ main {
     .background-counter {
       position: absolute;
       display: flex;
-      top: 65vh;
+      top: 500px;
       width: 100%;
       height: auto;
       h6 {
@@ -269,6 +269,8 @@ main {
     .map {
       margin-bottom: 10%;
       margin-top: 10%;
+      margin-left: 40%;
+      margin-right: 40%;
     }
     p {
       font-size: 18px;
@@ -418,13 +420,13 @@ main {
     }
   }
   .gift-section {
-    height: 100vh;
+    height: 800px;
     background: rgba(142, 174, 207, 1);
     .flower-regalo {
       position: absolute;
       width: 300px;
       left: -90px;
-      top: 470%;
+      top: 3700px;
       transform: rotate(60deg);
     }
     .img-plane {
@@ -493,7 +495,7 @@ main {
   }
 
   .dress-code-section {
-    height: 50vh;
+    height: 500px;
     .img-dress-code {
       display: flex;
       flex-direction: column;
@@ -527,7 +529,7 @@ main {
   }
 
   .playlist-section {
-    height: 92vh;
+    height: 800px;
     background-color: #666666;
     .img-playlist {
       display: flex;
@@ -584,6 +586,7 @@ main {
     background-color: #8eaecf;
     .background-footer {
       margin-left: 0;
+      margin-bottom: 0;
     }
     h4 {
       font-size: 36px;
