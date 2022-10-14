@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap');
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 768px) {
 
   .fixed-top {
     display: none;
+    display: flex;
+    justify-content: space-evenly;
   }
 
   // desktop navbar
@@ -22,11 +24,17 @@
   }
   
   nav {
+    width: 100%;
     @include flexAround();
     align-items: center;
     min-height: 8vh;
     padding: 20px 0%;
     transition: all 0.9s ease;
+    position: fixed;
+    z-index: 99999;
+    &:hover {
+      color: #8eaecf;
+    }
   }
   
   .logo-desktop {
@@ -42,11 +50,12 @@
     font-size: 15px
   }
   
-  .nav-links {
+  a {
     @include flexAround();
     width: 40%;
     font-family: "Montserrat", sans-serif;
     list-style: none;
+    color: #303030;
     a {
       color: 303030;
       text-decoration: none;
@@ -116,6 +125,7 @@
 @media only screen and (max-width: 600px) {
   .desktop-navbar {
     display: none;
+    position: fixed;
   }
   .navbar {
     padding-top: 0;

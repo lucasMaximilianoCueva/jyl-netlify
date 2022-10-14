@@ -21,7 +21,7 @@ main {
 
     img {
       margin: 2rem 0;
-      width: 400px;
+      width: 80px;
     }
   }
 
@@ -115,7 +115,7 @@ main {
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 768px) {
   .section-simple {
     height: 100vh;
   }
@@ -424,7 +424,7 @@ main {
       position: absolute;
       width: 300px;
       left: -90px;
-      top: 500%;
+      top: 470%;
       transform: rotate(60deg);
     }
     .img-plane {
