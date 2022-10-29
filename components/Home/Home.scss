@@ -267,8 +267,8 @@ main {
     text-align: center;
     // margin: 20% 0 0 0;
     .map {
-      margin-bottom: 10%;
-      margin-top: 10%;
+      margin-bottom: 50px;
+      margin-top: 50px;
       margin-left: 40%;
       margin-right: 40%;
     }
@@ -433,7 +433,7 @@ main {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 10%;
+      margin-bottom: 50px;
     }
     h3 {
       font-size: 55px;
@@ -460,13 +460,18 @@ main {
     .copy-clipboard {
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      justify-content: space-between;
+      p {
+        margin-left: 40%;
+        padding: 0;
+      }
     }
     .btn-copy {
       display: flex;
       flex-direction: row;
       justify-content: center;
       max-width: 30px;
+      margin-right: 40%;
       width: 100%;
       padding: 1rem 1rem;
       background: #ffffff00;
@@ -500,6 +505,7 @@ main {
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-top: 30px;
     }
     h4 {
       font-size: 50px;
@@ -507,6 +513,7 @@ main {
       font-family: "melinda", cursive;
       color: #8eaecf;
       text-align: center;
+      margin-bottom: 50px;
     }
     h5 {
       font-size: 28px;
@@ -536,12 +543,12 @@ main {
       flex-direction: column;
       align-items: center;
       padding-top: 50px;
-      margin-bottom: 10%;
+      margin-bottom: 50px;
     }
     h4 {
       font-size: 50px;
       text-align: center;
-      margin-bottom: 10%;
+      margin-bottom: 30px;
       color: #d5c690;
       font-family: "melinda", cursive;
     }
@@ -559,19 +566,21 @@ main {
       padding-top: 50px;
     }
     button {
+      position: absolute;
       font-size: 1rem;
       max-width: 160px;
       width: 100%;
       padding: 0.8rem 2rem;
-      background: #faedcd;
-      color: #4e8f7c;
-      border: none;
+      background: #faedcd00;
+      color: #ffffff;
+      border: 2px solid white;
       border-radius: 0.8rem;
       cursor: pointer;
       transition: filter 0.3s;
-
+      z-index: 1;
       &:hover {
         filter: brightness(0.7);
+        background: #ffffff6c;
       }
     }
     .background-footer {
@@ -602,7 +611,7 @@ main {
         padding: 0 2% 0 2%;
         font-size: 30px;
         text-align: center;
-        margin-bottom: 10%;
+        margin-bottom: 30px;
         color: #ffffff;
         font-family: "melinda", cursive;
       }
@@ -972,8 +981,13 @@ main {
     .copy-clipboard {
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      justify-content: space-between;
+      width: 100%;
       height: 20px;
+      p {
+        padding: 0;
+        margin-left: 15%;
+      }
       img {
         width: 20px;
         margin: 0;
@@ -990,6 +1004,7 @@ main {
       display: flex;
       flex-direction: row;
       justify-content: center;
+      margin-right:15%;
       max-width: 30px;
       width: 100%;
       padding: 0.5rem 0.5rem;

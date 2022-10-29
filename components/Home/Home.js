@@ -182,7 +182,7 @@ export default function Home() {
           <div id="Bienvenidos!" className="info-section">
             <div>
               <h1>14&nbsp; Enero 2023</h1>
-              <h2>Ceremonia desde 11:30hs.</h2>
+              <h2>Ceremonia desde 11:00hs.</h2>
               <div className="container-title">
                 <img className="flower-small" src={flowerSingle} alt="flower" />
                 <h3>
