@@ -221,7 +221,7 @@ export default function Home() {
               <h1>Ubicación</h1>
               <p>
                 Realizaremos la ceremonia alegórica para los que no pudieron
-                acompañarnos en el civil a las 11:30hs. Luego empezamos con la
+                acompañarnos en el civil a las 11:00hs. Luego empezamos con la
                 fiesta en el mismo lugar! Te dejamos la ubicación y algunos
                 medios de transporte para guiarte.
               </p>
@@ -434,7 +434,7 @@ export default function Home() {
           <h4>Los infaltables!</h4>
           <p>
             Queremos divertirnos junto a vos, <br /> por eso esperamos tus
-            tenaikenes <br />
+            temaikenes <br />
             favs que no pueden faltar.
           </p>
         </div>
