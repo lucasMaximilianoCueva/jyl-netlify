@@ -1,11 +1,13 @@
 export const calculateTimeLeft = () => {
   let year = new Date().getFullYear() + 1;
-  let month = new Date().getMonth() - 8;
-  let day = new Date().getDate() - 9;
+  let month = new Date().getMonth();
+  let day = new Date().getDate();
 
-  const difference = +new Date(`${year}-${month}-${day}`.replace(/-/g, "/")) - +new Date();
+  const difference = +new Date(`2023-01-14 11:00`.replace(/-/g, "/")) - +new Date();
 
   let timeLeft;
+
+  console.log(new Date("2023-01-14 11:00"))
 
   if (difference > 0) {
     timeLeft = {
