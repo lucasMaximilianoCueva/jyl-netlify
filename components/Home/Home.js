@@ -151,11 +151,7 @@ export default function Home() {
         <header>
           <div className="section-simple">
             <div id="main-section">
-              <img
-                className="img-flower"
-                src={flowerTop}
-                alt="flower"
-              />
+              <img className="img-flower" src={flowerTop} alt="flower" />
 
               <div className="home">
                 <div>
@@ -193,11 +189,12 @@ export default function Home() {
                 ¡Estamos super felices! Nos sentimos en las nubes y queremos
                 compartir con vos todo nuestro amor. Por eso estamos preparando
                 con mucho cariño y esfuerzo un casamiento en el que te lo
-                pasarás genial. <br /> <br /> Algo super importante, <strong>evento +18</strong> confirmanos
-                lo antes posible por favor, que así organizarlo todo nos será
-                mucho más fácil. <br /> <br /> ¡Esperamos que disfruten tanto
-                como nosotros, un abrazo muuuy grande! <br /> <br /> El día de
-                la fiesta compartinos tus <br /> fotos del evento con
+                pasarás genial. <br /> <br /> Algo super importante,{" "}
+                <strong>evento +18</strong> confirmanos lo antes posible por
+                favor, que así organizarlo todo nos será mucho más fácil. <br />{" "}
+                <br /> ¡Esperamos que disfruten tanto como nosotros, un abrazo
+                muuuy grande! <br /> <br /> El día de la fiesta compartinos tus{" "}
+                <br /> fotos del evento con
               </p>
             </div>
             <div className="redes-icon">
@@ -427,45 +424,56 @@ export default function Home() {
       </div>
 
       <div id="playlist" className="playlist-section">
-        <div className="img-playlist">
-          <img src={dance} alt="img" />
-        </div>
-        <div>
-          <h4>Los infaltables!</h4>
-          <p>
-            Queremos divertirnos junto a vos, <br /> por eso esperamos tus
-            temaikenes <br />
-            favs que no pueden faltar.
-          </p>
-        </div>
-        <div className="button-playlist">
-          <button
-            type="button"
-            onClick={(e) => {
-              e.preventDefault();
-              window.location.href = "https://open.spotify.com/playlist/2jEEcEd1CbVOwop3vD593c?si=K-Vtmr4GSwigHb0VVythXw&utm_source=whatsapp&pt=effa4b92b23ea916197fdf1d6bca4e14";
-            }}
-          >
-            <i className="fa-brands fa-spotify"></i> Sugerir
-          </button>
-          <img
-            src={backgFooter}
-            className="background-footer"
-            alt="background-footer"
-          ></img>
-        </div>
-        <div className="footer">
-          <h4>¡Te esperamos!</h4>
+        <div className="playlist-title">
+          <div className="img-playlist">
+            <img src={dance} alt="img" />
+          </div>
           <div>
-            <span className="brand-letter">J</span>{" "}
-            <span className="brand-letter-1">&</span>
-            <span className="brand-letter">L</span>
+            <h4>Los infaltables!</h4>
+            <p>
+              Queremos divertirnos junto a vos, por eso esperamos tus temaikenes
+              favs que no pueden faltar.
+            </p>
           </div>
-          <div className="credits">
-            <h6>Designed by Shesi</h6>
-            <h6>Developed by Lucas</h6>
+          <div className="button-playlist">
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href =
+                  "https://open.spotify.com/playlist/2jEEcEd1CbVOwop3vD593c?si=K-Vtmr4GSwigHb0VVythXw&utm_source=whatsapp&pt=effa4b92b23ea916197fdf1d6bca4e14";
+              }}
+            >
+              <i className="fa-brands fa-spotify"></i> Sugerir
+            </button>
           </div>
         </div>
+        <video
+          loop="auto"
+          autoplay=""
+          preload="auto"
+          poster="https://withjoy.com/assets/public/marcom-prod/sitewide/block_abc/abc-static.jpg?opt=aggressive&amp;ver=2"
+          src="https://player.vimeo.com/external/463869972.hd.mp4?s=cfd0881f42f82de80cb880d13a406be3aa35999a&amp;profile_id=175"
+          playsinline=""
+        ></video>
+      </div>
+
+      <div className="footer">
+        <img
+          src={backgFooter}
+          className="background-footer"
+          alt="background-footer"
+        ></img>
+        <h4>¡Te esperamos!</h4>
+        <div>
+          <span className="brand-letter">J</span>{" "}
+          <span className="brand-letter-1">&</span>
+          <span className="brand-letter">L</span>
+        </div>
+      </div>
+      <div className="credits">
+          <h6>Designed by Shesi</h6>
+          <h6>Developed by Lucas</h6>
       </div>
       <ReactCanvasConfetti refConfetti={getInstance} style={canvasStyles} />
     </main>

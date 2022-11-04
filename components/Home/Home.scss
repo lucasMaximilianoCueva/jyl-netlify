@@ -1075,12 +1075,25 @@ main {
 
   .playlist-section {
     height: 90vh;
-    background-color: #666666;
+    overflow: hidden;
+    background-color: #8eaecf;
+    .playlist-title {
+      position: absolute;
+      z-index: 2;
+    }
+    video {
+      filter: brightness(0.5);
+      height: 90%;
+      position: relative;
+      left: -150%;
+      width: 250%;
+      object-fit: cover;
+    }
     .img-playlist {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 3%;
+      padding-top: 20%;
       img {
         width: 100px;
       }
@@ -1122,14 +1135,14 @@ main {
         background: #ffffff6c;
       }
     }
+  }
+
+  .footer {
     .background-footer {
       width: 100%;
       bottom: 0;
       margin: 0;
     }
-  }
-
-  .footer {
     padding-top: 5%;
     background-color: #8eaecf;
     h4 {
@@ -1151,19 +1164,20 @@ main {
         font-family: "melinda", cursive;
       }
     }
-    .credits {
-      height: 60px;
-      background-color: #303030;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      h6 {
-        font-size: 10px;
-        color: #faedcd;
-        text-align: center;
-        padding: 0;
-      }
+  }
+  .credits {
+    width: 100%;
+    height: 60px;
+    background-color: #303030;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h6 {
+      font-size: 10px;
+      color: #faedcd;
+      text-align: center;
+      padding: 0;
     }
   }
 }
