@@ -449,12 +449,13 @@ export default function Home() {
           </div>
         </div>
         <video
-          loop="auto"
-          autoplay=""
-          preload="auto"
+          loop
+          preload=""
+          playsInline
+          autoPlay 
+          muted
           poster="https://withjoy.com/assets/public/marcom-prod/sitewide/block_abc/abc-static.jpg?opt=aggressive&amp;ver=2"
           src="https://player.vimeo.com/external/463869972.hd.mp4?s=cfd0881f42f82de80cb880d13a406be3aa35999a&amp;profile_id=175"
-          playsinline=""
         ></video>
       </div>
 
